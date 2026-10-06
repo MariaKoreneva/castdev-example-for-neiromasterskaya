@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Как люди справляются с тревогой и какой формат поддержки им нужен</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main class="page">
+    <form id="survey-form" novalidate>
+      <section class="card intro">
+        <div class="intro-accent" aria-hidden="true"></div>
+        <h1>Как люди справляются с тревогой и какой формат поддержки им нужен</h1>
+        <p>Здравствуйте!</p>
+        <p>Я изучаю, с какими трудностями сталкиваются люди, когда тревога начинает мешать повседневной жизни, и какая поддержка в таких ситуациях действительно была бы полезна.</p>
+        <p>Это не психологический тест и не диагностика. Здесь нет правильных и неправильных ответов — важен именно ваш опыт.</p>
+        <p>Анкета займёт около 5–7 минут.</p>
+      </section>
+
+      <section class="card" data-question="q1">
+        <p class="question-title">Насколько часто за последний месяц вы чувствовали тревогу или сильное беспокойство? <span class="required-mark" aria-hidden="true">*</span></p>
+        <div class="options">
+          <label class="option"><input type="radio" name="q1" value="practically-never"> <span>Практически не чувствовал(а)</span></label>
+          <label class="option"><input type="radio" name="q1" value="few-times-month"> <span>Несколько раз за месяц</span></label>
+          <label class="option"><input type="radio" name="q1" value="once-week"> <span>Примерно раз в неделю</span></label>
+          <label class="option"><input type="radio" name="q1" value="few-times-week"> <span>Несколько раз в неделю</span></label>
+          <label class="option"><input type="radio" name="q1" value="almost-daily"> <span>Практически каждый день</span></label>
+        </div>
+        <p class="error-note" data-error="q1">Пожалуйста, ответьте на этот вопрос</p>
+      </section>
+
+      <section class="card" data-question="q2">
+        <p class="question-title">В каких ситуациях тревога или беспокойство возникают у вас чаще всего? <span class="required-mark" aria-hidden="true">*</span></p>
+        <p class="hint">Можно выбрать несколько вариантов</p>
+        <div class="options">
+          <label class="option"><input type="checkbox" name="q2" value="work"> <span>Работа или учёба</span></label>
+          <label class="option"><input type="checkbox" name="q2" value="money"> <span>Деньги и финансовые вопросы</span></label>
+          <label class="option"><input type="checkbox" name="q2" value="relationships"> <span>Отношения с близкими</span></label>
+          <label class="option"><input type="checkbox" name="q2" value="health"> <span>Здоровье</span></label>
+          <label class="option"><input type="checkbox" name="q2" value="future"> <span>Неопределённость и мысли о будущем</span></label>
+          <label class="option"><input type="checkbox" name="q2" value="decisions"> <span>Необходимость принимать решения</span></label>
+          <label class="option"><input type="checkbox" name="q2" value="communication"> <span>Общение с другими людьми</span></label>
+          <label class="option"><input type="checkbox" name="q2" value="new"> <span>Когда нужно сделать что-то новое или непривычное</span></label>
+          <label class="option"><input type="checkbox" name="q2" value="no-reason"> <span>Даже когда явной причины нет</span></label>
+          <label class="option"><input type="checkbox" name="q2" value="other" data-other-toggle="q2-other"> <span>Другое</span></label>
+        </div>
+        <div class="other-field" id="q2-other">
+          <input type="text" name="q2_other" placeholder="Ваш вариант" autocomplete="off">
+        </div>
+        <p class="error-note" data-error="q2">Пожалуйста, ответьте на этот вопрос</p>
+      </section>
+
+      <section class="card" data-question="q3">
+        <p class="question-title">Что в состоянии тревоги или беспокойства мешает вам больше всего? <span class="required-mark" aria-hidden="true">*</span></p>
+        <p class="hint">Можно выбрать не более 3 вариантов</p>
+        <div class="options" data-max="3" data-limit-note="q3-limit">
+          <label class="option"><input type="checkbox" name="q3" value="rumination"> <span>Постоянно прокручиваю мысли в голове</span></label>
+          <label class="option"><input type="checkbox" name="q3" value="relax"> <span>Мне трудно расслабиться</span></label>
+          <label class="option"><input type="checkbox" name="q3" value="focus"> <span>Сложно сосредоточиться на делах</span></label>
+          <label class="option"><input type="checkbox" name="q3" value="postpone"> <span>Откладываю решения или действия</span></label>
+          <label class="option"><input type="checkbox" name="q3" value="irritable"> <span>Становлюсь раздражительным(ой)</span></label>
+          <label class="option"><input type="checkbox" name="q3" value="sleep"> <span>Трудно заснуть или спокойно спать</span></label>
+          <label class="option"><input type="checkbox" name="q3" value="avoid"> <span>Избегаю некоторых ситуаций</span></label>
+          <label class="option"><input type="checkbox" name="q3" value="switch"> <span>Мне сложно переключиться и перестать думать о проблеме</span></label>
+          <label class="option"><input type="checkbox" name="q3" value="other" data-other-toggle="q3-other"> <span>Другое</span></label>
+        </div>
+        <div class="other-field" id="q3-other">
+          <input type="text" name="q3_other" placeholder="Ваш вариант" autocomplete="off">
+        </div>
+        <p class="limit-note" id="q3-limit">Можно выбрать не более 3 вариантов</p>
+        <p class="error-note" data-error="q3">Пожалуйста, ответьте на этот вопрос</p>
+      </section>
+
+      <section class="card" data-question="q4">
+        <p class="question-title">Что вы обычно делаете, когда тревога становится сильнее? <span class="required-mark" aria-hidden="true">*</span></p>
+        <p class="hint">Можно выбрать несколько вариантов</p>
+        <div class="options">
+          <label class="option"><input type="checkbox" name="q4" value="distract"> <span>Стараюсь отвлечься</span></label>
+          <label class="option"><input type="checkbox" name="q4" value="talk"> <span>Разговариваю с близкими или друзьями</span></label>
+          <label class="option"><input type="checkbox" name="q4" value="search"> <span>Ищу информацию или советы в интернете</span></label>
+          <label class="option"><input type="checkbox" name="q4" value="techniques"> <span>Использую дыхательные упражнения, медитации или другие техники</span></label>
+          <label class="option"><input type="checkbox" name="q4" value="sport"> <span>Занимаюсь спортом, гуляю</span></label>
+          <label class="option"><input type="checkbox" name="q4" value="psychologist"> <span>Обращаюсь к психологу</span></label>
+          <label class="option"><input type="checkbox" name="q4" value="meds"> <span>Принимаю назначенные врачом препараты</span></label>
+          <label class="option"><input type="checkbox" name="q4" value="wait"> <span>Стараюсь просто переждать</span></label>
+          <label class="option"><input type="checkbox" name="q4" value="nothing"> <span>Ничего специально не делаю</span></label>
+          <label class="option"><input type="checkbox" name="q4" value="other" data-other-toggle="q4-other"> <span>Другое</span></label>
+        </div>
+        <div class="other-field" id="q4-other">
+          <input type="text" name="q4_other" placeholder="Ваш вариант" autocomplete="off">
+        </div>
+        <p class="error-note" data-error="q4">Пожалуйста, ответьте на этот вопрос</p>
+      </section>
+
+      <section class="card" data-question="q5">
+        <p class="question-title">Что из того, что вы уже пробовали, действительно вам помогало? А что оказалось бесполезным или помогало только ненадолго?</p>
+        <textarea class="textarea" name="q5" rows="4" placeholder="Напишите несколько слов о своём опыте"></textarea>
+      </section>
+
+      <section class="card" data-question="q6">
+        <p class="question-title">Если бы тревога стала меньше мешать вашей жизни, что изменилось бы для вас в первую очередь?</p>
+        <textarea class="textarea" name="q6" rows="4" placeholder="Напишите, что было бы для вас особенно важно"></textarea>
+      </section>
+
+      <section class="card" data-question="q7">
+        <p class="question-title">Представьте онлайн-группу с психологом для людей, которым тревога и постоянное беспокойство мешают в повседневной жизни. Насколько вам в принципе был бы интересен такой формат? <span class="required-mark" aria-hidden="true">*</span></p>
+        <div class="scale">
+          <div class="scale-row">
+            <label class="scale-item"><span>1</span><input type="radio" name="q7" value="1" aria-label="1 — совсем не интересен"></label>
+            <label class="scale-item"><span>2</span><input type="radio" name="q7" value="2" aria-label="2"></label>
+            <label class="scale-item"><span>3</span><input type="radio" name="q7" value="3" aria-label="3 — пока не знаю"></label>
+            <label class="scale-item"><span>4</span><input type="radio" name="q7" value="4" aria-label="4"></label>
+            <label class="scale-item"><span>5</span><input type="radio" name="q7" value="5" aria-label="5 — очень интересен"></label>
+          </div>
+          <div class="scale-labels" aria-hidden="true">
+            <span>совсем не интересен</span>
+            <span></span>
+            <span>пока не знаю</span>
+            <span></span>
+            <span>очень интересен</span>
+          </div>
+        </div>
+        <p class="error-note" data-error="q7">Пожалуйста, ответьте на этот вопрос</p>
+      </section>
+
+      <section class="card" data-question="q8">
+        <p class="question-title">Что могло бы остановить вас от участия в такой группе? <span class="required-mark" aria-hidden="true">*</span></p>
+        <p class="hint">Можно выбрать несколько вариантов</p>
+        <div class="options">
+          <label class="option"><input type="checkbox" name="q8" value="share"> <span>Не хочу рассказывать о себе при других людях</span></label>
+          <label class="option"><input type="checkbox" name="q8" value="uncomfortable"> <span>Боюсь, что мне будет некомфортно в группе</span></label>
+          <label class="option"><input type="checkbox" name="q8" value="format"> <span>Не уверен(а), что групповой формат мне подойдёт</span></label>
+          <label class="option"><input type="checkbox" name="q8" value="privacy"> <span>Не хочу, чтобы другие участники знали обо мне личную информацию</span></label>
+          <label class="option"><input type="checkbox" name="q8" value="time"> <span>Мне сложно регулярно выделять время</span></label>
+          <label class="option"><input type="checkbox" name="q8" value="cost"> <span>Стоимость участия</span></label>
+          <label class="option"><input type="checkbox" name="q8" value="result"> <span>Не уверен(а), что это даст результат</span></label>
+          <label class="option"><input type="checkbox" name="q8" value="individual"> <span>Мне больше подходит индивидуальная работа</span></label>
+          <label class="option"><input type="checkbox" name="q8" value="nothing"> <span>Меня ничего из перечисленного не останавливает</span></label>
+          <label class="option"><input type="checkbox" name="q8" value="other" data-other-toggle="q8-other"> <span>Другое</span></label>
+        </div>
+        <div class="other-field" id="q8-other">
+          <input type="text" name="q8_other" placeholder="Ваш вариант" autocomplete="off">
+        </div>
+        <p class="error-note" data-error="q8">Пожалуйста, ответьте на этот вопрос</p>
+      </section>
+
+      <section class="card" data-question="q9">
+        <p class="question-title">Что для вас было бы особенно важно в такой группе? <span class="required-mark" aria-hidden="true">*</span></p>
+        <p class="hint">Можно выбрать не более 3 вариантов</p>
+        <div class="options" data-max="3" data-limit-note="q9-limit">
+          <label class="option"><input type="checkbox" name="q9" value="understand"> <span>Лучше понимать, почему возникает тревога</span></label>
+          <label class="option"><input type="checkbox" name="q9" value="ways"> <span>Получить конкретные способы справляться с ней</span></label>
+          <label class="option"><input type="checkbox" name="q9" value="calm"> <span>Научиться успокаиваться в сложных ситуациях</span></label>
+          <label class="option"><input type="checkbox" name="q9" value="thoughts"> <span>Меньше прокручивать тревожные мысли</span></label>
+          <label class="option"><input type="checkbox" name="q9" value="support"> <span>Чувствовать поддержку людей с похожими трудностями</span></label>
+          <label class="option"><input type="checkbox" name="q9" value="ask"> <span>Иметь возможность задавать вопросы психологу</span></label>
+          <label class="option"><input type="checkbox" name="q9" value="situations"> <span>Разбирать реальные жизненные ситуации</span></label>
+          <label class="option"><input type="checkbox" name="q9" value="homework"> <span>Получать задания или упражнения между встречами</span></label>
+          <label class="option"><input type="checkbox" name="q9" value="other" data-other-toggle="q9-other"> <span>Другое</span></label>
+        </div>
+        <div class="other-field" id="q9-other">
+          <input type="text" name="q9_other" placeholder="Ваш вариант" autocomplete="off">
+        </div>
+        <p class="limit-note" id="q9-limit">Можно выбрать не более 3 вариантов</p>
+        <p class="error-note" data-error="q9">Пожалуйста, ответьте на этот вопрос</p>
+      </section>
+
+      <section class="card" data-question="q10">
+        <p class="question-title">Какой формат онлайн-группы был бы для вас наиболее удобным? <span class="required-mark" aria-hidden="true">*</span></p>
+
+        <div class="subquestion" data-sub="q10a">
+          <p class="subquestion-title">Как часто встречаться?</p>
+          <div class="options">
+            <label class="option"><input type="radio" name="q10a" value="weekly"> <span>1 раз в неделю</span></label>
+            <label class="option"><input type="radio" name="q10a" value="twice"> <span>2 раза в неделю</span></label>
+            <label class="option"><input type="radio" name="q10a" value="less"> <span>Реже одного раза в неделю</span></label>
+          </div>
+        </div>
+
+        <div class="subquestion" data-sub="q10b">
+          <p class="subquestion-title">Продолжительность одной встречи:</p>
+          <div class="options">
+            <label class="option"><input type="radio" name="q10b" value="60"> <span>До 60 минут</span></label>
+            <label class="option"><input type="radio" name="q10b" value="90"> <span>Около 1,5 часов</span></label>
+            <label class="option"><input type="radio" name="q10b" value="120"> <span>Около 2 часов</span></label>
+          </div>
+        </div>
+
+        <div class="subquestion" data-sub="q10c">
+          <p class="subquestion-title">Когда удобнее участвовать?</p>
+          <div class="options">
+            <label class="option"><input type="radio" name="q10c" value="weekday-day"> <span>В будни днём</span></label>
+            <label class="option"><input type="radio" name="q10c" value="weekday-evening"> <span>В будни вечером</span></label>
+            <label class="option"><input type="radio" name="q10c" value="weekend"> <span>В выходные</span></label>
+          </div>
+        </div>
+        <p class="error-note" data-error="q10">Пожалуйста, ответьте на этот вопрос</p>
+      </section>
+
+      <section class="card" data-question="q11">
+        <p class="question-title">Если бы вы могли сами предложить, какой должна быть такая группа, чтобы вы захотели в ней участвовать, что бы вы добавили или изменили?</p>
+        <textarea class="textarea" name="q11" rows="4" placeholder="Напишите, что для вас было бы важно"></textarea>
+      </section>
+
+      <div class="actions">
+        <button class="submit" type="submit">Отправить</button>
+      </div>
+    </form>
+
+    <section class="card done" id="done-card" hidden>
+      <h2>Ответ записан</h2>
+      <p>Спасибо за участие в исследовании.</p>
+      <p>Это демонстрационная версия. Введённые ответы не сохраняются.</p>
+    </section>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>
